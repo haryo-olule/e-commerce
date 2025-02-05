@@ -1,0 +1,691 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --bg-color: black;
+  --text-color: white;
+  --font-family: "Poppins", sans-serif;
+  --transition-duration: 0.3s;
+  /* Custom colors */
+  --main-color: #ffcc00;
+  --second-bg-color: #cccccc;
+  --hover-color: #ff6600;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none; /* Note: For accessibility, we add custom focus styles below */
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+  transition: color var(--transition-duration);
+}
+
+*::selection {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Custom Focus Styles for Accessibility */
+a:focus,
+button:focus {
+  outline: 2px dashed var(--hover-color);
+  outline-offset: 4px;
+}
+
+/* Section */
+section {
+  padding: 1rem 9%;
+  width: 100%;
+}
+
+/* Anchor Tags */
+a {
+  text-align: center;
+  color: var(--second-bg-color);
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+li {
+  list-style: none;
+}
+
+/* Header and Navbar Styling */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background-color: var(--bg-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures header stays on top */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo a {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar li {
+  font-size: 1.4rem;
+}
+
+.navbar li a {
+  color: var(--text-color);
+}
+
+.navbar li a:hover {
+  color: var(--hover-color);
+}
+
+/* Icon Styling */
+.fa-magnifying-glass {
+  font-size: 2rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* Buttons Section */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.btn img {
+  height: 24px;
+}
+
+.btn a {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+.btn span {
+  background-color: red;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.btn-menu i {
+  font-size: 2.4rem;
+  color: var(--text-color);
+}
+
+/* Home Section Styling */
+.home-section {
+  width: 100%;
+  padding: 1rem 9%; /* Same horizontal padding as header */
+}
+
+.home-content {
+  margin-top: 10%;
+}
+
+.home-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  height: 60vh;
+}
+
+.home-col {
+  color: black;
+  padding: 20px;
+}
+
+.home-col h2 {
+  font-size: 2rem;
+  text-align: justify;
+  font-weight: bolder;
+}
+
+.home-col h1 {
+  font-size: 5rem;
+  text-align: justify;
+  font-weight: bolder;
+}
+
+.btn1 {
+  display: inline-block;
+  background: black; /* You can replace this with a gradient if desired */
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn1 a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+}
+.info{
+  margin-bottom: 20px;
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+.filter{
+  display: flex;
+  margin: 20px 0;
+  
+}
+.btn2{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  width: 30%;
+}
+.filter-btn{
+  background: white;
+  font-weight: bolder;
+
+}
+.filter-btn.active{
+  background-color: black;
+  padding:10px ;
+  color: white;
+  border-radius: 10px;
+}
+.headphone{
+  width: 100%;
+}
+.headphone-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.headphone-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-bottom: 20px;
+}
+
+.headphone-col {
+  width: 250px;
+  height: 350px;
+  margin: 10px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth scaling and shadow effects */
+}
+  
+
+.headphone-col img {
+  width: 150px; /* Set a consistent width */
+  height: 150px; /* Set a consistent height */
+  object-fit: contain; /* Ensure images maintain their aspect ratio */
+  text-align: center;
+  margin-bottom: 20px;
+}
+.headphone-col p{
+  font-size: 1.4rem;
+}
+.headphone-col:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+.rating i{
+  color: black;
+ 
+ 
+  
+}
+.btn3 , .btn3 a{
+  font-size: 1.3;
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.popout-section{
+  position: fixed; /* Use fixed instead of sticky for full-screen effect */
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  display: none; /* Hidden initially */
+  background: rgba(0, 0, 0, 0.4); /* Dark transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  z-index: 1000; /* Ensure it's above everything */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.pop-row {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  column-gap: 20px; /* Adjusted for better spacing */
+  background-color: white;
+  border-radius: 10px;
+  height: 90vh;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  align-items: center; /* Center items in each column */
+  justify-content: center;
+}
+
+.pop-col{
+    text-align: justify;
+    height: 500px;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+    color: black;
+   
+
+}
+.pop-col img{
+  height: 30px;
+}
+
+.pop-col img {
+  height: 78%;
+  object-fit: cover;
+ 
+  
+}
+.pol1 img{
+  width: 22%;
+  gap:20px ;
+  object-fit: contain;
+  margin: 10px;
+  padding: 2px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.pol1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pol1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pop-col1 {
+  height: 100%;
+  
+}
+.pop-col1 p{
+  font-size: 1.3em;
+  text-align: justify;
+  line-height: 2.5rem;
+  margin-bottom: 20px;
+  width: 70%;
+  font-weight: bolder;
+}
+
+.pop-col h2 {
+  margin-bottom: 20px;
+  font-size: 2.3rem;
+  line-height: 4rem;
+}
+
+.pop-col h1 {
+  font-size: 5rem;
+  line-height: 7rem;
+  margin-bottom: 30px;
+}
+.pop-col1 h3{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin: 20px 0;
+}
+
+.colors {
+  margin-bottom: 20px;
+}
+.colors a {
+  font-size: 1.2rem;
+  color: white;
+  padding: 10px;
+  background-color: black;
+  margin-top: 10px;
+  border-radius:10px ;
+}
+.quantity {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.quantity button {
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.quantity button:hover {
+  background-color: rgb(24, 23, 23);
+}
+
+.quantity span {
+  font-size: 20px;
+  font-weight: bold;
+  min-width: 40px;
+  text-align: center;
+  display: inline-block;
+}
+.btn-actions{
+    margin: 10px 0;
+    margin-left: 20px;
+   
+}
+
+
+.btn-actions a{
+  font-size: 1.2rem;
+  color: white;
+  padding: 10px;
+  background-color: black;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+
+
+.close-popout {
+  position: absolute;
+  top: 6%;
+  left: 10%;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    top: -700%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88%;
+    text-align: left;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 10px;
+    transition: top 0.7s ease-in-out;
+    z-index: 100;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  .navbar.show {
+    top: 60px;
+  }
+
+  .btn-menu {
+    display: block;
+  }
+
+  header {
+    padding: 1rem 4%;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+
+  .logo a {
+    font-size: 2rem;
+  }
+
+  .btn img {
+    height: 30px;
+  }
+
+  .btn a {
+    font-size: 2rem;
+  }
+
+  .btn span {
+    font-size: 2rem;
+    padding: 0.1rem 0.5rem;
+  }
+  
+  .home-section {
+    padding: 1rem 4%; /* Adjusted horizontal padding for mobile */
+    background-color: white;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .home-content {
+    padding-top: 30px;
+  }
+
+  .home-row {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .home-col {
+    text-align: center;
+  }
+
+  .home-col h1,
+  .home-col h2 {
+    text-align: center;
+  }
+  .btn2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .headphone-row {
+    grid-template-columns: 1fr; /* Switch to a single column layout */
+    gap: 10px;
+  }
+
+  .headphone-col {
+    width: 90%;       /* Make the card take most of the available width */
+    height: auto;     /* Allow the height to adjust based on content */
+    margin: 10px auto;/* Center the card and add vertical spacing */
+    padding: 15px;    /* Reduce padding for a more compact look */
+  }
+
+  .headphone-col img {
+    width: 120px;     /* Reduce image size for smaller screens */
+    height: 120px;
+    margin-bottom: 15px; /* Adjust bottom margin to keep spacing consistent */
+  }
+
+  .headphone-col p {
+    font-size: 1.2rem; /* Slightly reduce text size for mobile */
+  }
+  .popout-section {
+    align-items: center; /* Center content */
+    padding-top: 0; /* Remove extra padding */
+    display: flex;
+    justify-content: center;
+  }
+
+  .pop-info {
+    flex-direction: column;
+    width: 100%;
+    height: 92%; /* Fill the entire section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .pop-row {
+    grid-template-columns: 1fr;
+    height: auto; /* Fill available height */
+    width: 100%;
+    padding: 15px;
+    overflow-y: scroll;
+  }
+
+  .pop-col {
+    height: auto;
+    padding: 10px;
+    width: 100%; /* Take full width */
+  }
+
+  .pop-col img {
+    width: 80%;
+  }
+
+  .pop-col h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  .pop-col h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .pop-col1 {
+  
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pop-col1 p {
+    font-size: 1.5em;
+    width: 90%;
+    line-height: 2rem;
+  }
+
+  .pop-col1 h3 {
+    font-size: 2rem;
+  }
+
+  .pol1 img {
+    width: 25%;
+  }
+
+  .colors a {
+    font-size: 1.5rem;
+    padding: 8px;
+    gap: 20px;
+  }
+  .quantity{
+    display: flex;
+    gap: 10px;
+    font-size: 2rem;
+    
+  }
+
+  .quantity span {
+    font-size: 2rem;
+  }
+
+  .quantity button {
+    padding: 8px;
+  }
+
+  .btn-actions a {
+    font-size: 1.5rem;
+  }
+
+
+  .close-popout {
+    top: 7%;
+    left: 12%;
+    font-size: 20px;
+    color: black;
+    font-size: 3rem;
+  }
+  
+
+}
