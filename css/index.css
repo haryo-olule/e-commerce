@@ -6,9 +6,8 @@
   --font-family: "Poppins", sans-serif;
   --transition-duration: 0.3s;
   /* Custom colors */
-  --main-color: #ffcc00;
+
   --second-bg-color: #cccccc;
-  --hover-color: #ff6600;
 }
 
 /* Global Reset */
@@ -25,7 +24,7 @@
 }
 
 *::selection {
-  background: var(--main-color);
+
   color: var(--bg-color);
 }
 
@@ -48,7 +47,7 @@ button:focus {
 
 /* Section */
 section {
-  padding: 1rem 9%;
+  padding: 1rem 4%;
   width: 100%;
 }
 
@@ -59,96 +58,103 @@ a {
   font-weight: bold;
 }
 
-a:hover {
-  color: var(--hover-color);
-}
+
 
 li {
   list-style: none;
 }
 
 /* Header and Navbar Styling */
+
+/* HEADER STYLING */
 header {
+  width: 100%;
+  background-color: var(--bg-color, #fff);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
+  padding: 1rem 4%;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 1rem 9%;
-  background-color: var(--bg-color);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Ensures header stays on top */
+  z-index: 1000;
+
 }
 
+/* NAVIGATION BAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+/* LOGO */
 .logo {
   display: flex;
   align-items: center;
 }
 
 .logo img {
+  width: 40px;
   height: 40px;
+  margin-right: 10px;
 }
 
 .logo a {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: var(--text-color);
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--text-color, #333);
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
+/* NAVIGATION LINKS */
 .navbar {
+  list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 20px;
 }
 
 .navbar li {
-  font-size: 1.4rem;
+  list-style: none;
 }
 
-.navbar li a {
-  color: var(--text-color);
+.navbar a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--text-color, #333);
+  transition: color 0.3s;
 }
 
-.navbar li a:hover {
-  color: var(--hover-color);
+.navbar a:hover {
+  color: #ff6600;
 }
 
-/* Icon Styling */
-.fa-magnifying-glass {
-  font-size: 2rem;
-  color: var(--text-color);
-  cursor: pointer;
-}
-
-/* Buttons Section */
+/* USER + CART BUTTONS */
 .btn {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 15px;
+  font-size: 20px;
   position: relative;
 }
 
-.btn img {
-  height: 24px;
+.btn i {
+  cursor: pointer;
 }
-
-.btn a {
-  font-size: 1.4rem;
-  color: var(--text-color);
-}
-
 .btn span {
   background-color: red;
   color: white;
-  font-size: 1.2rem;
-  padding: 0.2rem 0.6rem;
-  border-radius: 50%;
+  font-size: 1.9rem;
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  left: -20px;
   cursor: pointer;
   white-space: nowrap;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
 }
 
 .btn-menu {
@@ -164,7 +170,7 @@ nav {
 /* Home Section Styling */
 .home-section {
   width: 100%;
-  padding: 1rem 9%; /* Same horizontal padding as header */
+
 }
 
 .home-content {
@@ -310,174 +316,176 @@ nav {
   padding: 5px;
   border-radius: 10px;
 }
+ .popout-section {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: none;
+   background: rgba(0, 0, 0, 0.4);
+   backdrop-filter: blur(10px);
+   z-index: 1000;
+ }
 
-.popout-section{
-  position: fixed; /* Use fixed instead of sticky for full-screen effect */
-  top: 0;
-  left: 0;
-  display: none;
-  width: 100%;
-  height: 100%;
-  display: none; /* Hidden initially */
-  background: rgba(0, 0, 0, 0.4); /* Dark transparent background */
-  backdrop-filter: blur(10px); /* Blur effect */
-  z-index: 1000; /* Ensure it's above everything */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ .pop-row {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+   gap: 20px;
+   background-color: white;
+   border-radius: 10px;
+   height: 90vh;
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+
+ }
+
+ .pop-col {
+   text-align: justify;
+   height: 500px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: black;
+   cursor: pointer;
+ }
+
+ .pop-col img {
+   height: 78%;
+   object-fit: cover;
+   max-width: 100%;
+ }
+
+ .pol1 {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+
+ .pol1 img {
+   width: 22%;
+   object-fit: contain;
+   margin: 10px;
+   padding: 2px;
+   border-radius: 10px;
+   border: 1px solid black;
+ }
+
+ .pop-col1 {
+   height: 100%;
+ }
+
+ .pop-col1 p {
+   font-size: 1.3em;
+   text-align: justify;
+   line-height: 1.6;
+   margin-bottom: 20px;
+   width: 70%;
+   font-weight: bold;
+ }
+
+ .pop-col h2 {
+   margin-bottom: 20px;
+   font-size: 2.3rem;
+   line-height: 1.4;
+ }
+
+ .pop-col h1 {
+   font-size: 5rem;
+   line-height: 1.2;
+   margin-bottom: 30px;
+ }
+
+ .pop-col1 h3 {
+   font-size: 2.5rem;
+   font-weight: bold;
+   margin: 20px 0;
+ }
+
+ .colors {
+   margin-bottom: 20px;
+ }
+
+ .colors a {
+   font-size: 1.2rem;
+   color: white;
+   padding: 10px;
+   background-color: black;
+   margin-top: 10px;
+   border-radius: 10px;
+   display: inline-block;
+   transition: background-color 0.3s ease;
+ }
+
+ .colors a:hover {
+   background-color: #333;
+ }
+
+ .quantity {
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
   
-}
-.pop-row {
-  display: grid;
-  padding: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  column-gap: 20px; /* Adjusted for better spacing */
-  background-color: white;
-  border-radius: 10px;
-  height: 90vh;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  align-items: center; /* Center items in each column */
-  justify-content: center;
-}
+ }
 
-.pop-col{
-    text-align: justify;
-    height: 500px;
-    display: flex;
-    cursor: pointer;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center ;
-    color: black;
-   
+ .quantity button {
+   background-color: black;
+   color: white;
+   border: none;
+   cursor: pointer;
+   padding: 10px;
+   border-radius: 10px;
+   transition: background-color 0.3s ease;
+ }
 
-}
-.pop-col img{
-  height: 30px;
-}
+ .quantity button:hover {
+   background-color: #333;
+ }
 
-.pop-col img {
-  height: 78%;
-  object-fit: cover;
+ .quantity span {
+   font-size: 20px;
+   font-weight: bold;
+   min-width: 40px;
+   text-align: center;
+   display: inline-block;
+ }
+
  
-  
-}
-.pol1 img{
-  width: 22%;
-  gap:20px ;
-  object-fit: contain;
-  margin: 10px;
-  padding: 2px;
-  border-radius: 10px;
-  border: 1px solid black;
-}
-.pol1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.pol1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.pop-col1 {
-  height: 100%;
-  
-}
-.pop-col1 p{
-  font-size: 1.3em;
-  text-align: justify;
-  line-height: 2.5rem;
-  margin-bottom: 20px;
-  width: 70%;
-  font-weight: bolder;
-}
 
-.pop-col h2 {
-  margin-bottom: 20px;
-  font-size: 2.3rem;
-  line-height: 4rem;
-}
+ .btn-actions a {
+   font-size: 1.2rem;
+   color: white;
+   padding: 10px;
+   background-color: black;
+   margin-bottom: 10px;
+   border-radius: 10px;
+   display: inline-block;
+   transition: background-color 0.3s ease;
+ }
 
-.pop-col h1 {
-  font-size: 5rem;
-  line-height: 7rem;
-  margin-bottom: 30px;
-}
-.pop-col1 h3{
-  font-size: 2.5rem;
-  font-weight: bolder;
-  margin: 20px 0;
-}
+ .btn-actions a:hover {
+   background-color: #333;
+ }
 
-.colors {
-  margin-bottom: 20px;
-}
-.colors a {
-  font-size: 1.2rem;
-  color: white;
-  padding: 10px;
-  background-color: black;
-  margin-top: 10px;
-  border-radius:10px ;
-}
-.quantity {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
+ .close-popout {
+   position: absolute;
+   top: 6%;
+   left: 10%;
+   background: transparent;
+   border: none;
+   font-size: 24px;
+   cursor: pointer;
+   color: black;
+   transition: color 0.3s ease;
+ }
 
-.quantity button {
-  background-color: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
-}
-
-.quantity button:hover {
-  background-color: rgb(24, 23, 23);
-}
-
-.quantity span {
-  font-size: 20px;
-  font-weight: bold;
-  min-width: 40px;
-  text-align: center;
-  display: inline-block;
-}
-.btn-actions{
-    margin: 10px 0;
-    margin-left: 20px;
-   
-}
-
-
-.btn-actions a{
-  font-size: 1.2rem;
-  color: white;
-  padding: 10px;
-  background-color: black;
-  margin-bottom: 10px;
-  border-radius: 10px;
-}
-
-
-
-.close-popout {
-  position: absolute;
-  top: 6%;
-  left: 10%;
-  background: transparent;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: black;
-}
+ .close-popout:hover {
+   color: #333;
+ }
 
 
 /* Media Queries */
@@ -499,6 +507,9 @@ nav {
     background-color: var(--bg-color);
     color: var(--text-color);
   }
+  nav{
+    padding: 10px;
+  }
 
   .navbar.show {
     top: 60px;
@@ -508,23 +519,22 @@ nav {
     display: block;
   }
 
-  header {
-    padding: 1rem 4%;
-  }
+  
 
   .logo img {
-    height: 60px;
+    height: 30px;
   }
 
   .logo a {
     font-size: 2rem;
+    display: NONE;
   }
 
   .btn img {
     height: 30px;
   }
 
-  .btn a {
+  .btn i {
     font-size: 2rem;
   }
 
@@ -534,7 +544,6 @@ nav {
   }
   
   .home-section {
-    padding: 1rem 4%; /* Adjusted horizontal padding for mobile */
     background-color: white;
     width: 100%;
     overflow: hidden;
@@ -547,7 +556,7 @@ nav {
   .home-row {
     flex-direction: column;
     align-items: center;
-    height: auto;
+    height: 86vh;
   }
 
   .home-col {
@@ -557,6 +566,23 @@ nav {
   .home-col h1,
   .home-col h2 {
     text-align: center;
+
+  }
+  .home-col h2{
+    font-size: 2rem;
+    line-height: 4rem;
+    margin-bottom: 10px;
+    font-weight: bolder;
+  }
+  .home-col h1{
+    font-size: 4rem;
+    line-height: 6rem;
+    margin-bottom: 10px;
+    font-weight: bolder;
+  }
+  .home-col img{
+    width: 100%;
+    margin-top: -60px;
   }
   .btn2{
     display: flex;
@@ -596,6 +622,7 @@ nav {
   }
 
   .pop-info {
+    margin-top: 10%;
     flex-direction: column;
     width: 100%;
     height: 92%; /* Fill the entire section */
@@ -614,7 +641,7 @@ nav {
   }
 
   .pop-col {
-    height: auto;
+    height: 70vh;
     padding: 10px;
     width: 100%; /* Take full width */
   }
@@ -638,6 +665,7 @@ nav {
     width: 100%;
     display: flex;
     flex-direction: column;
+   
   }
 
   .pop-col1 p {
@@ -663,24 +691,27 @@ nav {
     display: flex;
     gap: 10px;
     font-size: 2rem;
-    
+   
   }
 
   .quantity span {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .quantity button {
     padding: 8px;
   }
-
+  
+  .btn-actions {
+    margin-top: 20px;
+  }
   .btn-actions a {
     font-size: 1.5rem;
   }
 
 
   .close-popout {
-    top: 7%;
+    top: 9%;
     left: 12%;
     font-size: 20px;
     color: black;
