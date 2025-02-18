@@ -1,0 +1,537 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --font-family: "Poppins", sans-serif;
+  --transition-duration: 0.3s;
+  /* Custom colors */
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none; /* Note: For accessibility, we add custom focus styles below */
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+  transition: color var(--transition-duration);
+}
+
+*::selection {
+  color: var(--bg-color);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Custom Focus Styles for Accessibility */
+a:focus,
+button:focus {
+  outline: 2px dashed var(--hover-color);
+  outline-offset: 4px;
+}
+
+/* Section */
+section {
+  padding: 1rem 4%;
+  width: 100%;
+}
+
+/* Anchor Tags */
+a {
+  text-align: center;
+  color: var(--second-bg-color);
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
+}
+
+/* Header and Navbar Styling */
+
+/* HEADER STYLING */
+header {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  padding: 1rem 4%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  color: black;
+}
+
+/* NAVIGATION BAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+}
+
+/* NAVIGATION LINKS */
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-left: -80px;
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff6600;
+}
+
+/* USER + CART BUTTONS */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+  position: relative;
+}
+
+.btn i {
+  cursor: pointer;
+}
+.btn span {
+  background-color: white;
+  color: black;
+  font-size: 1.9rem;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  left: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.btn-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.btn-menu i {
+  font-size: 2.4rem;
+  color: var(--text-color);
+}
+
+/* Footer Section */
+.footer {
+  margin-top: 20px;
+  padding: 1rem 4%;
+  background-color: white;
+}
+
+.footer-col {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: black;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: black;
+  text-decoration: none;
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: black;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  font-size: larger;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: black;
+  background-color: white;
+}
+.collection {
+  margin: 5% auto;
+  width: 100%;
+}
+
+.collection-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.col-filter {
+  width: 12%;
+  border-radius: 10px;
+}
+.col-info {
+  display: flex;
+  justify-content: space-between;
+}
+.col-filter-sort {
+  display: flex;
+  align-items: center; /* Vertically centers items */
+  justify-content: center; /* Horizontally centers items */
+  gap: 10px; /* Space between <h1> and <select> */ /* Add padding for better spacing */
+  border: 1px solid black; /* Solid black border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Heading Styling */
+.col-filter-sort h1 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0; /* Remove default margin to align perfectly */
+  line-height: 1; /* Ensure consistent line height */
+}
+
+/* Dropdown Styling */
+#sort-by {
+  color: #333;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 2rem;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.col-info h1 {
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.col-filter h1 {
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.col-filter__item {
+  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.col-filter__item h2 {
+  margin-bottom: 10px;
+}
+
+.col-filter__item label {
+  display: block;
+
+  cursor: pointer;
+}
+
+.col-item {
+  width: 100%;
+}
+
+.col-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: black;
+  margin-top: 10px;
+}
+
+.headphone-col {
+  width: 250px;
+  height: 350px;
+  margin: 10px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth scaling and shadow effects */
+}
+
+.headphone-col img {
+  width: 150px; /* Set a consistent width */
+  height: 150px; /* Set a consistent height */
+  object-fit: contain; /* Ensure images maintain their aspect ratio */
+  text-align: center;
+  margin-bottom: 20px;
+}
+.headphone-col p {
+  font-size: 1.5rem;
+}
+.headphone-col:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+.rating i {
+  color: black;
+}
+.btn3 {
+  width: 100%;
+  margin-top: 10px;
+}
+.btn3 a {
+  font-size: 1.5em;
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* Existing CSS code remains the same until media queries */
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Original mobile styles */
+  .navbar {
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    top: -700%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88%;
+    text-align: left;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 10px;
+    transition: top 0.7s ease-in-out;
+    z-index: 100;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  .navbar.show {
+    top: 60px;
+  }
+
+  .btn-menu {
+    display: block;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  .logo a {
+    font-size: 2rem;
+    display: none;
+  }
+
+  .btn img {
+    height: 30px;
+  }
+
+  .btn i {
+    font-size: 2rem;
+  }
+
+  .btn span {
+    font-size: 2rem;
+    padding: 0.1rem 0.5rem;
+  }
+
+  /* New collection responsiveness */
+  .collection-row {
+    flex-direction: column;
+  }
+
+  .col-filter {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .col-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .col-row {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .headphone-col {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+  }
+
+  /* Footer adjustments */
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .footer-col {
+    width: 50%;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Phone-specific styles */
+  .col-filter__item {
+    padding: 10px;
+  }
+
+  .col-row {
+    grid-template-columns: 1fr;
+  }
+
+  .headphone-col {
+    height: auto;
+    padding: 15px;
+  }
+
+  .headphone-col img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .footer-col .social-links a {
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+  }
+
+  .btn3 a {
+    font-size: 1.2rem;
+    padding: 3px 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  /* Small phone adjustments */
+  html {
+    font-size: 55%;
+  }
+
+  .btn span {
+    width: 15px;
+    height: 15px;
+    font-size: 1.2rem;
+  }
+
+  .headphone-col p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  /* Landscape mobile adjustments */
+  .navbar {
+    top: -800%;
+  }
+
+  .navbar.show {
+    top: 70px;
+  }
+}

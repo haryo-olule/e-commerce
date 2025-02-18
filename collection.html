@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Film Fanatics - Explore Movies and Entertainment"
+    />
+    <title>Film Fanatics</title>
+    <link rel="stylesheet" href="css/Collection.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav id="myNav">
+        <!-- LOGO -->
+        <div class="logo">
+          <img src="img/online-shopping.png" alt="UberGet logo" />
+          <a href="/">UberGet</a>
+        </div>
+
+        <!-- NAVIGATION LINKS -->
+        <ul class="navbar">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/collection.html">Collection</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+
+        <!-- USER + CART BUTTONS -->
+        <div class="btn">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+          <i class="fa-solid fa-user"></i>
+        </div>
+
+        <!-- HAMBURGER MENU (Mobile Only) -->
+        <div class="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+
+    <section class="collection">
+      <div class="collection-row">
+        <div class="col-filter">
+          <h1>Filter</h1>
+
+          <div class="col-filter__item">
+            <h2>Category</h2>
+            <label><input type="checkbox" name="category" value="furniture" /> Furniture</label><br />
+            <label><input type="checkbox" name="category" value="book" /> Book</label><br />
+            <label><input type="checkbox" name="category" value="headphone" /> Headphone</label><br />
+            <label><input type="checkbox" name="category" value="phone" /> Phone</label><br />
+          </div>
+
+          <div class="col-filter__item">
+            <h2>Type</h2>
+            <label><input type="checkbox" name="type" value="earbud" /> Earbud</label><br />
+            <label><input type="checkbox" name="type" value="chair" /> Chair</label><br />
+            <label><input type="checkbox" name="type" value="table" /> Table</label><br />
+            <label><input type="checkbox" name="type" value="headphone" /> Headphone</label><br />
+            <label><input type="checkbox" name="type" value="iphone" /> iPhone</label><br />
+            <label><input type="checkbox" name="type" value="samsung" /> Samsung</label><br />
+          </div>
+        </div>
+
+        <div class="col-item">
+          <div class="col-info">
+            <h1>All COLLECTION</h1>
+
+            <div class="col-filter-sort">
+              <select id="sort-by">
+                <option value="low-to-high">Sort By Low to High</option>
+                <option value="high-to-low">Sort By: High to Low</option>
+              </select>
+            </div>
+            
+          </div>
+
+          <div class="col-row">
+            <div class="headphone-col" data-category="headphone" data-type="headphone">
+              <img
+                src="img/The_Best_Wireless_Headphones_for_Quality_Sound-removebg-preview.png"
+                alt="Sony WH-1000XM4 Over-Ear Noise-Cancelling Headphones"
+              />
+              <h1>Sony WH-1000XM4</h1>
+              <h2>$349.99</h2>
+              <p>5 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="btn3">
+                <a href="#" id="info-sony">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="headphone" data-type="earbud">
+              <img
+                src="img/download-removebg-preview.png"
+                alt="Apple AirPods Pro 2nd Generation"
+              />
+              <h1>Apple AirPods Pro</h1>
+              <h2>$249.00</h2>
+              <p>8 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="btn3">
+                <a href="#" id="info-airpods">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="headphone" data-type="earbud">
+              <img
+                src="img/Samsung_Galaxy_Buds3_Pro_True_Wireless_Bluetooth_Earbuds_-_Silver-removebg-preview.png"
+                alt="Samsung Galaxy Buds 3 Pro True Wireless Earbuds"
+              />
+              <h1>Galaxy Buds 3 Pro</h1>
+              <h2>$199.99</h2>
+              <p>10 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="btn3">
+                <a href="#" id="info-buds">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="headphone" data-type="headphone">
+              <img
+                src="img/Apple_Air_Pods_Max-removebg-preview.png"
+                alt="Apple AirPods Max Over-Ear Headphones"
+              />
+              <h1>Apple AirPods Max</h1>
+              <h2>$549.00</h2>
+              <p>4 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="btn3">
+                <a href="#" id="info-airpodsmax">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="furniture" data-type="chair">
+              <img
+                src="img/Industriële_keukenstoel_zonder_armleuning__kunststof_binnenstoel_met_open_achterkant_en_metalen_onderstel_Wit-2-delige_set-removebg-preview.png"
+                alt="Armless Kitchen Chair"
+              />
+              <h1>Armless Kitchen Chair</h1>
+              <h2>$89.99</h2>
+              <p>6 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="btn3">
+                <a href="#">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="furniture" data-type="table">
+              <img
+                src="/img/Dining_Tables_PNG_Image__Dining_Table__Table__Wooden_Table_PNG_Image_For_Free_Download-removebg-preview.png"
+                alt="Wooden Dining Table"
+              />
+              <h1>Wooden Dining Table</h1>
+              <h2>$299.00</h2>
+              <p>4 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="btn3">
+                <a href="#">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="furniture" data-type="chair">
+              <img
+                src="/img/Leather_Upholstered_Wingback_Accent_Chair_with_Pillows___Homary-removebg-preview.png"
+                alt="Leather Upholstered Wingback Accent Chair"
+              />
+              <h1>Wingback Accent Chair</h1>
+              <h2>$350.00</h2>
+              <p>3 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="btn3">
+                <a href="#">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="furniture" data-type="chair">
+              <img
+                src="img/Invidiae_Transitions_Modern_Leather_Wngback_Armchair_with_Metal_Legs_Set_of_2_by_HULALA_HOME-removebg-preview.png"
+                alt="Vintage Leather Armchair"
+              />
+              <h1>Vintage Leather Armchair</h1>
+              <h2>$450.00</h2>
+              <p>2 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="btn3">
+                <a href="#">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="book">
+              <img src="img/download (1).jpeg" alt="The Idiot Book Cover" />
+              <h1>The Idiot</h1>
+              <h2>$45.00</h2>
+              <p>10 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="btn3">
+                <a href="#">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="book">
+              <img
+                src="img/Crime and Punishment.jpeg"
+                alt="Crime and Punishment Book Cover"
+              />
+              <h1>Crime and Punishment</h1>
+              <h2>$50.00</h2>
+              <p>8 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="btn3">
+                <a href="#">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="book">
+              <img
+                src="img/70 Books Everyone Should Read At Least Once, As Shared By People In This Online Thread.jpeg"
+                alt="The Brothers Karamazov Book Cover"
+              />
+              <h1>The Brothers Karamazov</h1>
+              <h2>$68.00</h2>
+              <p>6 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="btn3">
+                <a href="#">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="book">
+              <img
+                src="img/☆▪︎book cover _ Notes from the Underground▪︎☆.jpeg"
+                alt="Notes from Underground Book Cover"
+              />
+              <h1>Notes from Underground</h1>
+              <h2>$40.00</h2>
+              <p>7 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="btn3">
+                <a href="#">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="phone" data-type="samsung">
+              <img
+                src="img/Samsung_Galaxy_S24_Ultra_Titanium_Black_3D_Model_Download_3D_printing_stl_obj_fbx_gltf_usdz_glb_3dmax_blend_Vision_Pro-removebg-preview.png"
+                alt="Samsung Galaxy S24 Ultra"
+              />
+              <h1>Samsung S24 Ultra</h1>
+              <h2>$999.00</h2>
+              <p>5 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="btn3">
+                <a href="#">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="phone" data-type="iphone">
+              <img
+                src="img/APPLE_iPhone_16_Pro_Max_Titane_Naturel_256Go_-_Smartphone-removebg-preview.png"
+                alt="iPhone 16 Pro Max"
+              />
+              <h1>iPhone 16 Pro Max</h1>
+              <h2>$1,199.00</h2>
+              <p>3 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="btn3">
+                <a href="#">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="phone">
+              <img
+                src="img/Google_Pixel_9_5G-removebg-preview.png"
+                alt="Google Pixel 9 Pro"
+              />
+              <h1>Google Pixel 9 Pro</h1>
+              <h2>$899.00</h2>
+              <p>4 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="btn3">
+                <a href="#">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="phone">
+              <img
+                src="img/Vivo_X200_Pro_price_in_Pakistan___Specifications__2025_-removebg-preview.png"
+                alt="Vivo X200 Pro"
+              />
+              <h1>Vivo X200 Pro</h1>
+              <h2>$799.00</h2>
+              <p>6 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="btn3">
+                <a href="#">Info</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">affiliate program</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>online shop</h4>
+            <ul>
+              <li><a href="#">watch</a></li>
+              <li><a href="#">bag</a></li>
+              <li><a href="#">shoes</a></li>
+              <li><a href="#">dress</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/collection.js" defer></script>
+  </body>
+</html>

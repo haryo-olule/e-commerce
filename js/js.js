@@ -17,8 +17,7 @@ filterButtons.forEach((button) => {
     // Add 'active' class to the clicked button
     button.classList.add("active");
 
-    // Get the selected filter category
-    const filterCategory = button.getAttribute("data-filter"); // Fixed this
+   
 
     // Loop through items and filter them
     items.forEach((item) => {
@@ -46,25 +45,19 @@ images.forEach((img) => {
 
 
 
-const info = document.getElementById('Info');
-const pop = document.querySelector(".popout-section");
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
 
-// Show pop-out on button click
-info.addEventListener("click", (event) => {
-  event.preventDefault(); // Prevent default anchor behavior
-  pop.style.display = "block";  // Show the pop-out window
-});
+tabButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Remove active class from all buttons and contents
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+    tabContents.forEach(content => content.classList.remove('active'));
 
-
-
-
-const closepopout = document.querySelectorAll(".close-popout");
-const popout = document.querySelector(".popout-section");
-
-// Loop through all close buttons and attach event listeners
-closepopout.forEach(button => {
-  button.addEventListener("click", () => {
-    popout.style.display = "none";  // Hide the pop-out window
+    // Add active class to clicked button and corresponding content
+    button.classList.add('active');
+    const tabId = button.getAttribute('data-tab');
+    document.getElementById(tabId).classList.add('active');
   });
 });
 
@@ -92,3 +85,5 @@ decrement.addEventListener("click", () => {
   }
   counterDisplay.textContent = counter;
 });
+
+

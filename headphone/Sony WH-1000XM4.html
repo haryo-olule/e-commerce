@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Film Fanatics - Explore Movies and Entertainment"
+    />
+    <title>Film Fanatics</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav id="myNav">
+        <!-- LOGO -->
+        <div class="logo">
+          <img src="/img/online-shopping.png" alt="UberGet logo" />
+          <a href="/">UberGet</a>
+        </div>
+
+        <!-- NAVIGATION LINKS -->
+        <ul class="navbar">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/collection.html">Collection</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        
+        <!-- USER + CART BUTTONS -->
+        <div class="btn">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+          <i class="fa-solid fa-user"></i>
+        </div>
+
+        <!-- HAMBURGER MENU (Mobile Only) -->
+        <div class="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+  
+    <section class="popout-section" id="pop2">
+      <div class="pop-info">
+        <div class="pop-row">
+          <div class="pop-col">
+            <img
+              src="/img/Headphone_Professional_Sony_WH-1000XM5-removebg-preview.png"
+              alt="Sony WH-1000XM5"
+            />
+
+            <div class="pol1">
+              <img
+                src="/img/Headphone_Professional_Sony_WH-1000XM5-removebg-preview.png"
+                alt="Sony WH-1000XM5"
+              />
+              <img
+                src="/img/Sony_WH-1000XM5_Premium_Noise_Cancelling_Wireless_Over-Ear_Headphones__Black_-removebg-preview.png"
+                alt="Sony WH-1000XM5"
+              />
+              <img
+                src="/img/Sony_ULT_Wear_Wireless_Noise_Canceling_Headphones_in_Black___Nebraska_Furniture_Mart-removebg-preview.png"
+                alt="Sony WH-1000XM5"
+              />
+            </div>
+          </div>
+          <div class="pop-col">
+            <div class="pop-col1">
+              <button class="close-popout">&times;</button>
+              <h2>Sony WH-1000XM5</h2>
+
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <h3 class="price">$649.00</h3>
+
+              <p>
+                WH-1000XM5 redefine over-ear headphones with high-fidelity
+                audio, innovative design, and active noise cancellation.
+              </p>
+
+              <div class="colors">
+                <h2>Choose a Color</h2>
+                <a href="#">White</a>
+                <a href="#">Black</a>
+              </div>
+
+              <div class="quantity">
+                <h2>Quantity</h2>
+                <button id="decrement">-</button>
+                <span>0</span>
+                <button id="increment">+</button>
+              </div>
+
+              <div class="btn-actions">
+                <a href="#">Buy Now</a>
+              </div>
+
+              <p>Free Delivery Over Orders Over $300.00</p>
+            </div>
+          </div>
+        </div>
+
+        <section class="tabs">
+          <div class="tab-list">
+            <button class="tab-button active" data-tab="description">Description</button>
+            <button class="tab-button" data-tab="information">Additional Information</button>
+            <button class="tab-button" data-tab="reviews">Reviews</button>
+          </div>
+    
+          <div class="tab-content active" id="description">
+            <h2>Product Description</h2>
+            <p>Experience the next level of premium sound with the Sony WH-1000XM5 wireless noise-canceling headphones. Engineered with cutting-edge audio technology, these over-ear headphones deliver exceptional sound clarity, deep bass, and industry-leading noise cancellation.</p>
+          </div>
+    
+          <div class="tab-content" id="information">
+            <h2>Additional Information</h2>
+            <ul class="features-list">
+              <li><strong>Industry-Leading Noise Cancellation:</strong> Advanced noise-canceling technology blocks out external distractions</li>
+              <li><strong>High-Resolution Audio:</strong> Experience studio-quality sound with deep bass, crisp highs, and balanced mids</li>
+              <li><strong>Long Battery Life:</strong> Enjoy up to 30 hours of playback, with 3 hours of use from a 3-minute charge</li>
+              <li><strong>Multipoint Connectivity:</strong> Effortlessly switch between two connected devices</li>
+            </ul>
+          </div>
+    
+          <div class="tab-content" id="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+              <p><strong>John D.</strong> ★★★★★ - "Great quality product!"</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="headphone">
+
+    
+          <h1 class="info">Related Product</h1>
+    
+          <div class="headphone-row">
+            <!-- Product 1 -->
+            <div class="headphone-col" data-category="headphone" data-type="headphone">
+              <img
+                src="/img/The_Best_Wireless_Headphones_for_Quality_Sound-removebg-preview.png"
+                alt="Sony WH-1000XM4 Over-Ear Noise-Cancelling Headphones"
+              />
+              <h1>Sony WH-1000XM4</h1>
+              <h2>$349.99</h2>
+              <p>5 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="btn3">
+                <a href="/headphone/Sony WH-1000XM4.html" id="Info">Info</a>
+    
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="headphone" data-type="earbud">
+              <img
+                src="/img/download-removebg-preview.png"
+                alt="Apple AirPods Pro 2nd Generation"
+              />
+              <h1>Apple AirPods Pro</h1>
+              <h2>$249.00</h2>
+              <p>8 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="btn3">
+                <a href="/headphone/Apple AirPods Pro.html" id="info-airpods">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="headphone" data-type="earbud">
+              <img
+                src="/img/Samsung_Galaxy_Buds3_Pro_True_Wireless_Bluetooth_Earbuds_-_Silver-removebg-preview.png"
+                alt="Samsung Galaxy Buds 3 Pro True Wireless Earbuds"
+              />
+              <h1>Galaxy Buds 3 Pro</h1>
+              <h2>$199.99</h2>
+              <p>10 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="btn3">
+                <a href="/headphone/galaxy pro.html" id="info-buds">Info</a>
+              </div>
+            </div>
+
+            <div class="headphone-col" data-category="headphone" data-type="headphone">
+              <img
+              src="/img/AirPods_Max__1_-removebg-preview.png"
+              alt="Apple AirPods Max Over-Ear Headphones"
+            />
+              <h1>Apple AirPods Max</h1>
+              <h2>$549.00</h2>
+              <p>4 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="btn3">
+                <a href="/headphone/Apple AirPods Max.html" id="info-airpodsmax">Info</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+   
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">affiliate program</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>online shop</h4>
+            <ul>
+              <li><a href="#">watch</a></li>
+              <li><a href="#">bag</a></li>
+              <li><a href="#">shoes</a></li>
+              <li><a href="#">dress</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/js.js" defer></script>
+  </body>
+</html>
